@@ -28,8 +28,9 @@ function playRound(playerSelection, computerSelection) {
 }
 }
 
-for (let i = 0; i < 5; i++) {
-const playerSelection = prompt("Rock, Paper or Scissors", "Make a Choice");
-const computerSelection = getComputerChoice();
+// Plays five rounds:
+// for (let i = 0; i < 5; i++) {
+// const playerSelection = prompt("Rock, Paper or Scissors", "Make a Choice");
+// const computerSelection = getComputerChoice();
 
-}
+// }

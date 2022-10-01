@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.playerSelection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: beige;
+    width: 700px;
+}
+
+.emoji {
+    font-size: 125px;
+    /* border: solid 3px black; */
+    margin: 0px 25px 0px 25px;
+    padding: 15px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0,0.5);
+}
+
+.rock {
+    font-size: 100px;
+    padding: 45px 15px 14px 15px;
+}
+
+.paper {
+    margin-right: 0px;
+}
+
+.emoji:hover {
+    transform: scale(1.03);
+    text-shadow: 5px 5px 6px rgba(0, 0, 0,0.4);
+    cursor: pointer;    
+}
+
+.emoji:active {
+    transform: scale(0.98);
+    text-shadow: none;
+  }
+
+.playwindow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: pink;
+    width: 550px;
+    justify-content: space-between;
+}
+
+.playerbox {
+    height: 150px;
+    width: 150px;
+    border: dashed 5px black;
+    border-radius: 15px;
+}
+
+.botbox {
+    height: 150px;
+    width: 150px;
+    border: dashed 5px black;
+    border-radius: 15px;
+}
