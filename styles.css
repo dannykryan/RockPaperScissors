@@ -2,17 +2,26 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #bfbfbf;
 }
 
-.playerSelection {
+h1 {
+    margin-bottom: 25px;
+}
+
+.playerselection {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: beige;
-    width: 700px;
+    width: 600px;
+    background-color: #e6e6e6;
+    border-radius: 25px;
+    margin-top: 25px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0,0.5);
 }
 
-.emoji {
+.btn {
     font-size: 125px;
     /* border: solid 3px black; */
     margin: 0px 25px 0px 25px;
@@ -22,20 +31,20 @@ body {
 
 .rock {
     font-size: 100px;
-    padding: 45px 15px 14px 15px;
+    padding: 45px 15px 14px 40px;
 }
 
 .paper {
     margin-right: 0px;
 }
 
-.emoji:hover {
+.btn:hover {
     transform: scale(1.03);
     text-shadow: 5px 5px 6px rgba(0, 0, 0,0.4);
     cursor: pointer;    
 }
 
-.emoji:active {
+.btn:active {
     transform: scale(0.98);
     text-shadow: none;
   }
@@ -44,21 +53,44 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: pink;
+    padding: 25px;
     width: 550px;
+    background-color: #e6e6e6;
     justify-content: space-between;
+    border-radius: 25px;
+    font-size: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0,0.5);
 }
 
-.playerbox {
-    height: 150px;
+.playerbox, .botbox {
+    height: 120px;
     width: 150px;
-    border: dashed 5px black;
-    border-radius: 15px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 85px;
 }
 
-.botbox {
-    height: 150px;
-    width: 150px;
-    border: dashed 5px black;
-    border-radius: 15px;
+.score-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 40px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.scorenumbers {
+    display: flex;
+    font-size: 100;
+}
+
+.your-window, .bot-window {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
