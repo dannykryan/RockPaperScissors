@@ -110,5 +110,8 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.player-title, .bot-title {
     font-family: silkscreen, 'Courier New', Courier, monospace;
 }

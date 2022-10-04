@@ -20,18 +20,20 @@ function getBotChoice() {
 
 function win() {
     playerScore++;
-    console.log("win");
-    console.log("your score: " + playerScore + ", bot score: " + botScore);
+    playerScore_span.innerHTML = playerScore;
+    botScore_span.innerHTML = botScore;
+    result_h3.innerHTML = "You Win This Round!"
 }
 
 function lose() {
     botScore++;
-    console.log("You Lose. Pathetic.")
-    console.log("your score: " + playerScore + ", bot score: " + botScore);
+    playerScore_span.innerHTML = playerScore;
+    botScore_span.innerHTML = botScore;
+    result_h3.innerHTML = "You Lose This Round!"
 }
 
 function draw() {
-    console.log("Round Draw. Try again.");
+    result_h3.innerHTML = "Round Draw. Try Again."
 }
 
 function game(userChoice) {
@@ -60,12 +62,15 @@ game();
 function main() {
 rock_div.addEventListener('click', function() {
     game("r");
+    playerFace_div.innerHTML = "&#9994;";
 })
 paper_div.addEventListener('click', function() {
     game("p");
+    playerFace_div.innerHTML = "&#9995;";
 })
 scissors_div.addEventListener('click', function() {
     game("s");
+    playerFace_div.innerHTML = "&#9996;";
 })
 }
 
