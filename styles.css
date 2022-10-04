@@ -1,13 +1,30 @@
+header {
+    background-color: white;
+}
+
+header > h1 {
+    text-align: center;
+    margin-bottom: 25px;  
+    margin-top: 25px;
+    font-size: 50px;
+    color: #25272E;
+    font-family: silkscreen, 'Courier New', Courier, monospace;
+}
+
 body {
+    background-color: #cfcfcf;
+}
+
+h3 {
+    font-family: silkscreen, 'Courier New', Courier, monospace;
+}
+
+#gamecontainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #bfbfbf;
-}
-
-h1 {
-    margin-bottom: 25px;
+    font-weight: bold;
 }
 
 .playerselection {
@@ -60,10 +77,11 @@ h1 {
     border-radius: 25px;
     font-size: 20px;
     margin-bottom: 25px;
+    margin-top: 25px;
     box-shadow: 0px 0px 6px rgba(0, 0, 0,0.5);
 }
 
-.playerbox, .botbox {
+#playerbox, #botbox {
     height: 120px;
     width: 150px;
     border-radius: 100%;
@@ -73,14 +91,14 @@ h1 {
     font-size: 85px;
 }
 
-.score-box {
+#score-box {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     font-size: 40px;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: silkscreen, 'Courier New', Courier, monospace;
 }
 
 .scorenumbers {
@@ -92,5 +110,5 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: silkscreen, 'Courier New', Courier, monospace;
 }

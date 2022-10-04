@@ -7,31 +7,35 @@
     <title>Danny's 'Rock, Paper, Scissors' Game</title>
     <link rel="stylesheet" href="styles.css">
     <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen">
 </head>
 <body>
-    <h1>BRAINBOT MUST BE DEFEATED</h1>
-    <h3>FIRST TO FIVE</h3>
-    <div class="playwindow">
-        <div class="your-window">
-            <div class="playerbox">&#128528;</div>
-            <div class="player-title">You</div>
-        </div>
-        <div class="score-box">Score:
-            <div class="scorenumbers">
-                <div class="playerscore">0</div>/
-                <div class="botscore">0</div>
+    <header>
+        <h1>Brainbot Must Be Defeated</h1>
+    </header>
+    <div id="gamecontainer">
+        <div class="playwindow">
+            <div class="your-window">
+                <div id="playerbox">&#128528;</div>
+                <div class="player-title">You</div>
+            </div>
+            <div id="score-box">Score:
+                <div class="scorenumbers">
+                    <span id="playerscore">0</span>/
+                    <span id="botscore">0</span>
+                </div>
+            </div>
+            <div class="bot-window">
+                <div id="botbox">&#129302;</div>
+                <div class="bot-title">Brainbot9000</div>
             </div>
         </div>
-        <div class="bot-window">
-            <div class="botbox">&#129302;</div>
-            <div class="bot-title">Brainbot9000</div>
+        <h3>Choose your weapon to begin the game:</h3>
+        <div class="playerselection">
+            <div class="btn rock" data-selection="rock">&#9994;</div>
+            <div class="btn paper" data-selection="paper">&#9995;</div>
+            <div class="btn scissors" data-selection="scissors">&#9996;</div>
         </div>
-    </div>
-    <h3>CHOOSE YOUR WEAPON</h3>
-    <div class="playerselection">
-        <div class="btn rock">&#9994;</div>
-        <div class="btn paper">&#9995;</div>
-        <div class="btn scissors">&#9996;</div>
     </div>
 </body>
 </html>
