@@ -46,12 +46,12 @@ h3 {
     text-shadow: 2px 2px 3px rgba(0, 0, 0,0.5);
 }
 
-.rock {
+#rock {
     font-size: 100px;
     padding: 45px 15px 14px 40px;
 }
 
-.paper {
+#paper {
     margin-right: 0px;
 }
 
