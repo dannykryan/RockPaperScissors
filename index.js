@@ -1,6 +1,6 @@
 // cacheing the DOM
-const playerScore = 0;
-const botScore = 0;
+let playerScore = 0;
+let botScore = 0;
 
 const playerScore_span = document.getElementById("playerscore");
 const botScore_span = document.getElementById("botscore");
@@ -14,14 +14,48 @@ const scissors_div = document.getElementById("scissors");
 
 function getBotChoice() {
     const choices = ['r', 'p', 's'];
-    console.log(Math.floor(Math.random() * 3));
+    const randomNumber = (Math.floor(Math.random() * 3));
+    return choices[randomNumber];
 }
 
-getBotChoice();
+function win() {
+    playerScore++;
+    console.log("win");
+    console.log("your score: " + playerScore + ", bot score: " + botScore);
+}
+
+function lose() {
+    botScore++;
+    console.log("You Lose. Pathetic.")
+    console.log("your score: " + playerScore + ", bot score: " + botScore);
+}
+
+function draw() {
+    console.log("Round Draw. Try again.");
+}
 
 function game(userChoice) {
-    
+    const botChoice = getBotChoice();
+    switch(userChoice + botChoice) {
+        case "rs":
+        case "pr":
+        case "sp":
+            win();
+            break;
+        case "rp":
+        case "ps":
+        case "sr":
+            lose();
+            break;
+        case "rr":
+        case "pp":
+        case "ss":
+            draw();
+            break;
+    }
 }
+
+game();
 
 function main() {
 rock_div.addEventListener('click', function() {
