@@ -29,15 +29,17 @@ function lose() {
     botScore++;
     playerScore_span.innerHTML = playerScore;
     botScore_span.innerHTML = botScore;
-    result_h3.innerHTML = "You Lose This Round!"
+    result_h3.innerHTML = "You Lose This Round."
 }
 
 function draw() {
     result_h3.innerHTML = "Round Draw. Try Again."
 }
 
+var botChoice = undefined;
+
 function game(userChoice) {
-    const botChoice = getBotChoice();
+    botChoice = getBotChoice();
     switch(userChoice + botChoice) {
         case "rs":
         case "pr":
@@ -55,40 +57,39 @@ function game(userChoice) {
             draw();
             break;
     }
+    return botChoice;
 }
 
 game();
+
+function botFace() {
+    if(botChoice == "r") {
+        botFace_div.innerHTML = "&#9994;"; 
+    }
+    else if(botChoice == "p") {
+        botFace_div.innerHTML = "&#9995;";
+    }
+    else {
+        botFace_div.innerHTML = "&#9996;"; 
+    }
+}
 
 function main() {
 rock_div.addEventListener('click', function() {
     game("r");
     playerFace_div.innerHTML = "&#9994;";
+    botFace();
 })
 paper_div.addEventListener('click', function() {
     game("p");
     playerFace_div.innerHTML = "&#9995;";
+    botFace();
 })
 scissors_div.addEventListener('click', function() {
     game("s");
     playerFace_div.innerHTML = "&#9996;";
+    botFace();
 })
 }
 
 main();
-
-
-
-
-// const selectionButtons = document.querySelectorAll('[data-selection]')
-
-// // Add event listener for each button - on 'click; listens for event ('e')
-// selectionButtons.forEach(selectionButton => {
-//     selectionButton.addEventListener('click', e => {
-//         const selectionName = selectionButton.dataset.selection
-//         makeSelection(selectionName)
-//     })
-// })
-
-// function makeSelection(selection) {
-//     console.log(selection);
-// }
