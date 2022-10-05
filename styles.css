@@ -115,3 +115,8 @@ h3 {
 .player-title, .bot-title {
     font-family: silkscreen, 'Courier New', Courier, monospace;
 }
+
+.pauseplay {
+    opacity: 0.5;
+    pointer-events: none;
+}
