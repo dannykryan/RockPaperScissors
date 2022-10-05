@@ -55,7 +55,7 @@ function win() {
     botScore_span.innerHTML = botScore;
     if ( playerScore == 5 ) {
         result_h3.innerHTML = "You Win This Round.";
-        result_h3.innerHTML = "You did it! Brainbot is defeated. Refresh to play again";
+        setTimeout(function() { result_h3.innerHTML = "You did it! Brainbot is defeated. Refresh to play again";}, 1500);
         setTimeout(function() { botFace_div.innerHTML = "&#x1F4A5;" }, 1500);
         setTimeout(function() { playerFace_div.innerHTML = "&#128526;" }, 1500);
     }
@@ -77,7 +77,7 @@ function lose() {
     botScore_span.innerHTML = botScore;
     if ( botScore == 5 ) {
         result_h3.innerHTML = "You Lose This Round.";
-        result_h3.innerHTML = "Brainbot Wins. Refresh to try again.";
+        setTimeout(function() { result_h3.innerHTML = "Brainbot had defeated you. Refresh to try again.";}, 1500);
         setTimeout(function() { playerFace_div.innerHTML = "&#128557;" }, 1500);
         setTimeout(function() { botFace_div.innerHTML = "&#129302;" }, 1500);
     }
