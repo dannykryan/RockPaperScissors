@@ -77,7 +77,7 @@ function lose() {
     botScore_span.innerHTML = botScore;
     if ( botScore == 5 ) {
         result_h3.innerHTML = "You Lose This Round.";
-        setTimeout(function() { result_h3.innerHTML = "Brainbot had defeated you. Refresh to try again.";}, 1500);
+        setTimeout(function() { result_h3.innerHTML = "Brainbot has defeated you. Refresh to try again.";}, 1500);
         setTimeout(function() { playerFace_div.innerHTML = "&#128557;" }, 1500);
         setTimeout(function() { botFace_div.innerHTML = "&#129302;" }, 1500);
     }
